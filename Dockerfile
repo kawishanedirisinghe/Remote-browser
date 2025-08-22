@@ -34,10 +34,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone browser-use from GitHub (since it's not on PyPI)
-RUN git clone https://github.com/assafelovic/browser-use.git /tmp/browser-use \
-    && cd /tmp/browser-use \
-    && pip install . \
-    && rm -rf /tmp/browser-use
+
 
 # Copy requirements file
 COPY requirements.txt .
